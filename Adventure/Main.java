@@ -20,7 +20,7 @@ public class Main {
         try (Scanner scanner = new Scanner(System.in)) {
 
             Map<String, Integer> tempExits = new HashMap<String, Integer>();
-            locations.put(0, new Location(0, "You are sitting in front of a computer learning Java", tempExits));
+            locations.put(0, new Location(0, "You are sitting in front of a computer learning Java", null));
         
             tempExits = new HashMap<String, Integer>(4);
             tempExits.put("W", 2);
@@ -39,12 +39,14 @@ public class Main {
 
             tempExits = new HashMap<String, Integer>(2);
             tempExits.put("N", 1);
-            tempExits.put("W", 2);                   
+            tempExits.put("W", 2);           
+            //tempExits.put("E", 6);    java.lang.NullPointerException    
             locations.put(4, new Location(4, "You are in a valley beside a stream", tempExits));
 
             tempExits = new HashMap<String, Integer>(2);
             tempExits.put("S", 1);
             tempExits.put("W", 2);
+           // tempExits.put("N", 6);
             locations.put(5, new Location(5, "You are in the forest", tempExits));
 
             String[] road = "You are standing at the end of a road before a small brick building".split(" ");
